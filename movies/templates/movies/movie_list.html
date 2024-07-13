@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mi sitio de Peliculas</title>
+    <title>My Movie Site</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'movies/styles.css' %}">
 </head>
@@ -13,7 +13,7 @@
         <h2>Movies List</h2>
         <ul>
             {% for movie in movies %}
-                <li>{{ movie.title }} - {{ movie.publication_year }}</li>
+                <li><a href="{% url 'movie_detail' movie.id %}">{{ movie.title }} - {{ movie.publication_year }}</a></li>
             {% endfor %}
         </ul>
     </main>
