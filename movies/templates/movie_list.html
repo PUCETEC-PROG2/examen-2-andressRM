@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Movie Site</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'movies/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>My Movie Site</h1>
+    </header>
+    <main>
+        <h2>Movies List</h2>
+        <ul>
+            {% for movie in movies %}
+                <li>{{ movie.title }} - {{ movie.publication_year }}</li>
+            {% endfor %}
+        </ul>
+    </main>
+</body>
+</html>
